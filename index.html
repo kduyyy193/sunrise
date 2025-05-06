@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Đặt Hàng</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-4">
+      <div class="container mx-auto px-4">
+        <h1 class="text-2xl font-bold">Website Đặt Hàng</h1>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Form Đặt Hàng</h2>
+        <form id="orderForm" class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Họ và Tên</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="mt-1 p-2 w-full border rounded-md"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="mt-1 p-2 w-full border rounded-md"
+            />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700"
+              >Số Điện Thoại</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              class="mt-1 p-2 w-full border rounded-md"
+            />
+          </div>
+          <div>
+            <label for="product" class="block text-sm font-medium text-gray-700"
+              >Sản Phẩm</label
+            >
+            <input
+              type="text"
+              id="product"
+              name="product"
+              required
+              class="mt-1 p-2 w-full border rounded-md"
+            />
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+          >
+            Đặt Hàng
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+      <div class="container mx-auto px-4 text-center">
+        <p>© 2025 Website Đặt Hàng. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script-obfuscated.js"></script>
+  </body>
+</html>
