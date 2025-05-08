@@ -3,21 +3,28 @@ document
   .addEventListener("submit", async function (e) {
     e.preventDefault();
 
+    const submitButton = this.querySelector("button[type='submit']");
+
+    if (submitButton.disabled) return;
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Đang xử lý...";
+
     const formData = new FormData(this);
     const data = {
       name: formData.get("name"),
-      email: formData.get("email"),
+      address: formData.get("address"),
       phone: formData.get("phone"),
-      product: formData.get("product"),
-      province: formData.get("province"),
-      district: formData.get("district"),
-      ward: formData.get("ward"),
-      apiKey: "1512424kTKKyF",
+      product: formData.getAll("product"),
+      province: getSelectName("province"),
+      district: getSelectName("district"),
+      ward: getSelectName("ward"),
+      productId: "1512424kTKKyF",
     };
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyXMC0rWKlKNf-zA-dNdjc-yfCHvGS0VvPUzXD-TS57qDn8nzSZSlGKCz9ZyHFHqzdJbA/exec",
+        "https://script.google.com/macros/s/AKfycbxrdx3NERYnbnFs7ZZMIR_a4i6QNh2CjALPHvbR1S1xW-Vt3U86oaCadyQr3DAj2SyKJA/exec",
         {
           method: "POST",
           body: JSON.stringify(data),
@@ -29,7 +36,7 @@ document
       const result = await response.json();
       console.log(result);
       if (result.result === "success") {
-        alert("Đặt hàng thành công! Dữ liệu đã được lưu.");
+        window.location.href = "success.html";
         this.reset();
       } else {
         alert("Có lỗi: " + result.error);
@@ -37,6 +44,14 @@ document
     } catch (error) {
       console.error("Error:", error);
       alert("Có lỗi xảy ra. Vui lòng thử lại.");
-      k;
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "ĐẶT HÀNG";
     }
   });
+
+function getSelectName(selectId) {
+  const select = document.getElementById(selectId);
+  const selectedOption = select.options[select.selectedIndex];
+  return selectedOption ? selectedOption.textContent : "";
+}
