@@ -24,7 +24,7 @@ document
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwWRVjVw0mOAbMnsJFQPgol8D2bza17OLuq4N3VEMAumtbHPtwukMiPD1i7PY1s5fsBoQ/exec",
+        "https://script.google.com/macros/s/AKfycbxT324BtuIFjDNq7dSqI_QVRZiOv6jNWW32xQJx1W5PrNzxJpae8g3Nj8_-pFkjw2HNgQ/exec",
         {
           method: "POST",
           body: JSON.stringify(data),
