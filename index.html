@@ -150,9 +150,9 @@
         animation: heartBeat 3s ease-in-out infinite;
       }
       #introdue {
-        background: center center/ contain no-repeat scroll content-box border-box
-          url("./assets/imgs/u1.webp");
-          height: 1100px;
+        background: center center/ contain no-repeat scroll content-box
+          border-box url("./assets/imgs/u1.webp");
+        height: 1100px;
       }
       #sec3,
       #sec6 {
@@ -755,7 +755,10 @@
           Copyright © 2024 Sunrise VietNam
         </div>
       </footer>
-      <button onclick="scrollToForm()" class="animate-heartbeat fixed left-[calc(50%-92px)] bottom-4 w-[170px] px-4 py-2 bg-[#fc1705] text-[17px] font-bold rounded-[24px] text-white">
+      <button
+        onclick="scrollToForm()"
+        class="animate-heartbeat fixed left-[calc(50%-92px)] bottom-4 w-[170px] px-4 py-2 bg-[#fc1705] text-[17px] font-bold rounded-[24px] text-white"
+      >
         Mua ngay
       </button>
     </div>
@@ -774,7 +777,10 @@
     <script>
       function scrollToForm() {
         const orderFormSection = document.getElementById("orderFormSection");
-        orderFormSection.scrollIntoView({ behavior: "smooth", block: "center" });
+        orderFormSection.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
       }
       let timeLeft = 1800;
       const hoursElement = document.getElementById("hours");
@@ -902,5 +908,41 @@
       });
     </script>
     <script src="./script-obfuscated.js"></script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "687656047209096");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=687656047209096&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </body>
 </html>
