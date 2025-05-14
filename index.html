@@ -150,8 +150,9 @@
         animation: heartBeat 3s ease-in-out infinite;
       }
       #introdue {
-        background: center center/ cover no-repeat scroll content-box border-box
-          url("./assets/imgs/sec1.jpeg");
+        background: center center/ contain no-repeat scroll content-box border-box
+          url("./assets/imgs/u2.png");
+          height: 1100px;
       }
       #sec3,
       #sec6 {
@@ -170,58 +171,28 @@
   </head>
   <body>
     <div id="app" class="font-sans">
-      <section class="pb-3" id="introdue">
-        <div class="mx-3">
-          <h1 class="text-sm text-white font-light">Máy Triệt Lông Lạnh</h1>
-          <h2 class="text-[54px] leading-none font-bold text-[#daff08]">
+      <section class="pb-3 relative" id="introdue">
+        <div class="mx-3 text-center absolute left-0 right-0 top-[110px]">
+          <h1 class=" font-semibold text-[#daff08]">Máy Triệt Lông Lạnh</h1>
+          <h2 class="text-[40px] leading-none font-bold text-[#daff08]">
             IPL BHRL - 04
           </h2>
-          <p class="mt-4 text-sm text-white">Pro 9 CẤP ĐỘ</p>
-          <div class="mt-7">
-            <div class="feature-box bg-sr-green rounded-r-[24px] text-lg">
-              CÔNG NGHỆ IPL
-            </div>
-            <p class="font-light text-white text-sm mb-4 mt-1">
-              Giúp trẻ hóa và sáng da
-            </p>
-            <div class="feature-box bg-sr-green rounded-r-[24px] text-lg">
-              9 MỨC NĂNG LƯỢNG
-            </div>
-            <p class="font-light text-white text-sm mb-4 mt-1">
-              Thích hợp nhiều vùng da
-            </p>
-            <div class="feature-box bg-sr-green rounded-r-[24px] text-lg">
-              HIỆU QUẢ LÂU DÀI
-            </div>
-            <p class="font-light text-white text-sm mb-4 mt-1">
-              An toàn cho da
-            </p>
-          </div>
-          <div class="z-[10] relative">
-            <div
-              class="absolute bg-sr-green rounded-full z-[0] -left-2 top-0 w-[146px] h-[146px] flex items-center align-center flex-col p-1 pt-2"
-            ></div>
-            <div
-              class="flash-sale w-[146px] h-[146px] flex items-center align-center bg-white flex-col mb-4 p-1 pt-2 z-[10] relative"
-            >
-              <div
-                class="bg-sr-green rounded-full w-5 h-5 flex items-center align-center relative z-[10]"
-              >
-                <div class="animate-ping duration-100 text-[10px] mx-auto">
-                  ⚡
-                </div>
-              </div>
-              <div>
-                <span class="font-light text-lg text-sr-green">FLASH SALE</span>
-              </div>
-              <div
-                class="color-sr-green text-sr-green text-[66px] font-bold animate-heartbeat flex w-fit mx-auto -mt-4 ml-4"
-              >
-                <p>50</p>
-                <p class="text-sr-green text-[31px] mt-[14px]">%</p>
-              </div>
-            </div>
-          </div>
+          <p class=" font-semibold text-[#daff08]">Pro 9 CẤP ĐỘ</p>
+        </div>
+        <div class="absolute bottom-[390px] left-[14px] w-[116px] text-[#daff08] font-semibold text-[20px] text-center">
+          <span>Công Suất 36W</span>
+        </div>
+        <div class="absolute bottom-[302px] left-[14px] w-[116px] text-[#daff08] font-semibold text-[20px] text-center">
+          <span>Điện Áp DC12V/3A</span>
+        </div>
+        <div class="absolute bottom-[302px] left-[160px] w-[116px] text-[#daff08] font-semibold text-[20px] text-center">
+          <span>Chất Liệu ABS</span>
+        </div>
+        <div class="absolute bottom-[302px] right-[14px] w-[116px] text-[#daff08] font-semibold text-[20px] text-center">
+          <span>Cường độ 2s - 3s/ lần</span>
+        </div>
+        <div class="absolute bottom-[390px] right-[14px] w-[116px] text-[#daff08] font-semibold text-[20px] text-center">
+          <span>Công Nghệ ĐỨC</span>
         </div>
       </section>
 
@@ -457,9 +428,12 @@
         >
           FEEDBACK KHÁCH HÀNG
         </h2>
-        <div class="mt-0">
-          <img src="./assets/imgs/fback2.png" alt="Feedback 1" />
-          <img src="./assets/imgs/fback1.png" alt="Feedback 2" />
+        <div class="mt-0 mx-4">
+          <img class="mt-4" src="./assets/imgs/fb3.jpg" alt="Feedback 3" />
+          <img class="mt-4" src="./assets/imgs/fb4.jpg" alt="Feedback 4" />
+          <img class="mt-4" src="./assets/imgs/fb5.jpg" alt="Feedback 5" />
+          <img class="mt-4" src="./assets/imgs/fb6.jpg" alt="Feedback 6" />
+          <img class="mt-4" src="./assets/imgs/fback1.png" alt="Feedback 2" />
         </div>
       </section>
       <div class="relative">
@@ -531,7 +505,7 @@
             </div>
           </div>
         </div>
-        <div class="p-2 border-sr-green">
+        <div id="orderFormSection" class="p-2 border-sr-green">
           <form id="orderForm" class="mt-2">
             <div class="flex gap-1 w-full">
               <input
@@ -781,6 +755,9 @@
           Copyright © 2024 Sunrise VietNam
         </div>
       </footer>
+      <button onclick="scrollToForm()" class="animate-heartbeat fixed left-[calc(50%-92px)] bottom-4 w-[170px] px-4 py-2 bg-[#fc1705] text-[17px] font-bold rounded-[24px] text-white">
+        Mua ngay
+      </button>
     </div>
     <script
       async
@@ -795,6 +772,10 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+      function scrollToForm() {
+        const orderFormSection = document.getElementById("orderFormSection");
+        orderFormSection.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
       let timeLeft = 1800;
       const hoursElement = document.getElementById("hours");
       const minutesElement = document.getElementById("minutes");
